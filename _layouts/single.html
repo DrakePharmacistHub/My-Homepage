@@ -43,6 +43,9 @@ layout: default
         {% endif %}    
         </header>
       {% endunless %}
+      {% if page.collection == 'publications' and page.code_status %}
+        <p>Code status: {{ page.code_status }}</p>
+      {% endif %}
 
       <section class="page__content" itemprop="text">
         {{ content }}
